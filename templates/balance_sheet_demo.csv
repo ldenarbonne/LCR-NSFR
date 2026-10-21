@@ -1,0 +1,42 @@
+code,side,item,d30,m6,m12,y1
+A_CASH,Asset,Cash and central bank reserves,4000.0,0.0,0.0,0.0
+A_L1_SOV,Asset,"Level 1 securities – sovereigns, central banks, MDBs (unencumbered)",200.0,500.0,600.0,1700.0
+A_L1_CB,Asset,Extremely high-quality covered bonds (EU Level 1; BCBS Level 2A),0.0,0.0,0.0,1500.0
+A_L2A,Asset,"Level 2A securities (20% RW sovereigns, AA- corporates and covered bonds)",0.0,0.0,300.0,1200.0
+A_L2B_RMBS,Asset,Level 2B – qualifying RMBS,0.0,0.0,0.0,400.0
+A_L2B_CORP,Asset,Level 2B – corporate bonds A+ to BBB- and equities,0.0,0.0,0.0,600.0
+A_L2B_SEC,Asset,Non-RMBS securitisations (EU Level 2B; not HQLA under BCBS),0.0,0.0,0.0,300.0
+A_NONHQLA_SEC,Asset,Non-HQLA securities (marketable),0.0,0.0,200.0,1000.0
+A_SEC_ENC_6M,Asset,Level 1 securities encumbered in repos (< 6 months),2000.0,0.0,0.0,0.0
+A_REV_REPO_L1,Asset,Reverse repos with financials secured by Level 1,1200.0,300.0,0.0,0.0
+A_REV_REPO_OTH,Asset,Reverse repos with financials secured by non-HQLA,400.0,100.0,0.0,0.0
+A_FIN_UNSEC,Asset,Unsecured loans and deposits to financial institutions,600.0,300.0,100.0,0.0
+A_OPER_DEP,Asset,Operational deposits held at other banks,300.0,0.0,0.0,0.0
+A_LOAN_NFC,Asset,Loans to non-financial corporates,600.0,1800.0,1400.0,5200.0
+A_MORTGAGE,Asset,"Residential mortgages (RW ≤ 35%), unencumbered",120.0,600.0,700.0,10580.0
+A_MORT_POOL,Asset,Mortgages encumbered in covered bond cover pool (≥ 1 year),0.0,0.0,0.0,4000.0
+A_RETAIL_SME,Asset,Retail and SME loans (RW > 35%),250.0,800.0,800.0,3150.0
+A_LOAN_SOV,Asset,Loans to sovereigns and PSEs (RW ≤ 35%),50.0,150.0,150.0,850.0
+A_IM_POSTED,Asset,Initial margin posted and CCP default fund,0.0,0.0,0.0,200.0
+A_OTHER,Asset,"Fixed assets, non-performing and other assets",0.0,0.0,0.0,800.0
+L_CAPITAL,Liability,Regulatory capital (incl. Tier 2 ≥ 1 year),0.0,0.0,0.0,3500.0
+L_RET_STABLE,Liability,Retail deposits – stable,12000.0,1200.0,500.0,300.0
+L_RET_LESS,Liability,Retail deposits – less stable,4500.0,900.0,400.0,200.0
+L_SME,Liability,Small business deposits,2600.0,300.0,100.0,0.0
+L_OPER,Liability,"Operational deposits (clearing, custody, cash management)",3500.0,0.0,0.0,0.0
+L_NFC,Liability,Non-financial corporate deposits (non-operational),3800.0,800.0,300.0,100.0
+L_SOV,Liability,"Sovereign, PSE and MDB deposits",800.0,200.0,0.0,0.0
+L_FIN,Liability,Deposits from financial institutions,1400.0,400.0,200.0,0.0
+L_REPO_L1,Liability,Repos secured by Level 1 assets,1500.0,0.0,0.0,0.0
+L_REPO_L2A,Liability,Repos secured by Level 2A assets,500.0,0.0,0.0,0.0
+L_REPO_OTH,Liability,Repos secured by non-HQLA assets,200.0,0.0,0.0,0.0
+L_CB_FUND,Liability,Central bank funding,0.0,0.0,0.0,1000.0
+L_BONDS,Liability,Senior unsecured debt securities issued,300.0,700.0,800.0,3200.0
+L_COVERED,Liability,Covered bonds issued,0.0,0.0,300.0,2700.0
+L_OTHER,Liability,Other liabilities without stated maturity,0.0,0.0,0.0,800.0
+O_CRED_RETAIL,OBS,Committed credit facilities – retail and SME,0.0,0.0,0.0,2000.0
+O_CRED_NFC,OBS,"Committed credit facilities – corporates, sovereigns, PSEs",0.0,0.0,0.0,6000.0
+O_LIQ_NFC,OBS,"Committed liquidity facilities – corporates, sovereigns, PSEs",0.0,0.0,0.0,1000.0
+O_BANKS,OBS,Committed facilities to banks,0.0,0.0,0.0,500.0
+O_LIQ_FIN,OBS,Committed liquidity facilities to other financials,0.0,0.0,0.0,200.0
+O_TRADE,OBS,"Trade finance, guarantees and letters of credit",0.0,0.0,0.0,1500.0

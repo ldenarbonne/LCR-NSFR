@@ -1,0 +1,42 @@
+code,side,item,LCR – BCBS,LCR – EU,NSFR (<6m / 6-12m / ≥1y) – BCBS,NSFR – EU,stress class
+A_CASH,Asset,Cash and central bank reserves,"L1, haircut 0%","L1, haircut 0%",0% / 0% / 0%,0% / 0% / 0%,cbc_L1
+A_L1_SOV,Asset,"Level 1 securities – sovereigns, central banks, MDBs (unencumbered)","L1, haircut 0%","L1, haircut 0%",5% / 5% / 5%,5% / 5% / 5%,cbc_L1
+A_L1_CB,Asset,Extremely high-quality covered bonds (EU Level 1; BCBS Level 2A),"L2A, haircut 15%","L1CB, haircut 7%",15% / 15% / 15%,7% / 7% / 7%,cbc_L2A
+A_L2A,Asset,"Level 2A securities (20% RW sovereigns, AA- corporates and covered bonds)","L2A, haircut 15%","L2A, haircut 15%",15% / 15% / 15%,15% / 15% / 15%,cbc_L2A
+A_L2B_RMBS,Asset,Level 2B – qualifying RMBS,"L2B, haircut 25%","L2B, haircut 25%",50% / 50% / 50%,25% / 25% / 25%,cbc_L2B
+A_L2B_CORP,Asset,Level 2B – corporate bonds A+ to BBB- and equities,"L2B, haircut 50%","L2B, haircut 50%",50% / 50% / 50%,50% / 50% / 50%,cbc_L2B
+A_L2B_SEC,Asset,Non-RMBS securitisations (EU Level 2B; not HQLA under BCBS),not HQLA,"L2B, haircut 35%",50% / 50% / 85%,35% / 35% / 35%,cbc_nonHQLA
+A_NONHQLA_SEC,Asset,Non-HQLA securities (marketable),–,–,50% / 50% / 85%,50% / 50% / 85%,cbc_nonHQLA
+A_SEC_ENC_6M,Asset,Level 1 securities encumbered in repos (< 6 months),–,–,5% / 5% / 5%,5% / 5% / 5%,encumbered
+A_REV_REPO_L1,Asset,Reverse repos with financials secured by Level 1,inflow 0%,inflow 0%,10% / 50% / 100%,0% / 50% / 100%,in_fin_secured
+A_REV_REPO_OTH,Asset,Reverse repos with financials secured by non-HQLA,inflow 100%,inflow 100%,15% / 50% / 100%,5% / 50% / 100%,in_fin
+A_FIN_UNSEC,Asset,Unsecured loans and deposits to financial institutions,inflow 100%,inflow 100%,15% / 50% / 100%,10% / 50% / 100%,in_fin
+A_OPER_DEP,Asset,Operational deposits held at other banks,inflow 0%,inflow 5%,50% / 50% / 50%,50% / 50% / 50%,none
+A_LOAN_NFC,Asset,Loans to non-financial corporates,inflow 50%,inflow 50%,50% / 50% / 85%,50% / 50% / 85%,in_client
+A_MORTGAGE,Asset,"Residential mortgages (RW ≤ 35%), unencumbered",inflow 50%,inflow 50%,50% / 50% / 65%,50% / 50% / 65%,in_client
+A_MORT_POOL,Asset,Mortgages encumbered in covered bond cover pool (≥ 1 year),–,–,100% / 100% / 100%,85% / 85% / 85%,encumbered
+A_RETAIL_SME,Asset,Retail and SME loans (RW > 35%),inflow 50%,inflow 50%,50% / 50% / 85%,50% / 50% / 85%,in_client
+A_LOAN_SOV,Asset,Loans to sovereigns and PSEs (RW ≤ 35%),inflow 50%,inflow 50%,50% / 50% / 65%,50% / 50% / 65%,in_client
+A_IM_POSTED,Asset,Initial margin posted and CCP default fund,–,–,85% / 85% / 85%,85% / 85% / 85%,none
+A_OTHER,Asset,"Fixed assets, non-performing and other assets",–,–,100% / 100% / 100%,100% / 100% / 100%,none
+L_CAPITAL,Liability,Regulatory capital (incl. Tier 2 ≥ 1 year),–,–,100% / 100% / 100%,100% / 100% / 100%,none
+L_RET_STABLE,Liability,Retail deposits – stable,outflow 5%,outflow 5%,95% / 95% / 100%,95% / 95% / 100%,run_retail_stable
+L_RET_LESS,Liability,Retail deposits – less stable,outflow 10%,outflow 10%,90% / 90% / 100%,90% / 90% / 100%,run_retail_less
+L_SME,Liability,Small business deposits,outflow 10%,outflow 10%,90% / 90% / 100%,90% / 90% / 100%,run_retail_less
+L_OPER,Liability,"Operational deposits (clearing, custody, cash management)",outflow 25%,outflow 25%,50% / 50% / 100%,50% / 50% / 100%,run_operational
+L_NFC,Liability,Non-financial corporate deposits (non-operational),outflow 40%,outflow 40%,50% / 50% / 100%,50% / 50% / 100%,run_corporate
+L_SOV,Liability,"Sovereign, PSE and MDB deposits",outflow 40%,outflow 40%,50% / 50% / 100%,50% / 50% / 100%,run_corporate
+L_FIN,Liability,Deposits from financial institutions,outflow 100%,outflow 100%,0% / 50% / 100%,0% / 50% / 100%,run_financial
+L_REPO_L1,Liability,Repos secured by Level 1 assets,outflow 0%,outflow 0%,0% / 50% / 100%,0% / 50% / 100%,roll_secured_L1
+L_REPO_L2A,Liability,Repos secured by Level 2A assets,outflow 15%,outflow 15%,0% / 50% / 100%,0% / 50% / 100%,roll_secured_L2A
+L_REPO_OTH,Liability,Repos secured by non-HQLA assets,outflow 100%,outflow 100%,0% / 50% / 100%,0% / 50% / 100%,roll_secured_other
+L_CB_FUND,Liability,Central bank funding,outflow 0%,outflow 0%,0% / 50% / 100%,0% / 50% / 100%,roll_secured_L1
+L_BONDS,Liability,Senior unsecured debt securities issued,outflow 100%,outflow 100%,0% / 50% / 100%,0% / 50% / 100%,roll_market
+L_COVERED,Liability,Covered bonds issued,outflow 100%,outflow 100%,0% / 50% / 100%,0% / 50% / 100%,roll_market
+L_OTHER,Liability,Other liabilities without stated maturity,–,–,0% / 0% / 0%,0% / 0% / 0%,none
+O_CRED_RETAIL,OBS,Committed credit facilities – retail and SME,outflow 5%,outflow 5%,5% / 5% / 5%,5% / 5% / 5%,draw_retail
+O_CRED_NFC,OBS,"Committed credit facilities – corporates, sovereigns, PSEs",outflow 10%,outflow 10%,5% / 5% / 5%,5% / 5% / 5%,draw_corporate
+O_LIQ_NFC,OBS,"Committed liquidity facilities – corporates, sovereigns, PSEs",outflow 30%,outflow 30%,5% / 5% / 5%,5% / 5% / 5%,draw_corporate
+O_BANKS,OBS,Committed facilities to banks,outflow 40%,outflow 40%,5% / 5% / 5%,5% / 5% / 5%,draw_financial
+O_LIQ_FIN,OBS,Committed liquidity facilities to other financials,outflow 100%,outflow 100%,5% / 5% / 5%,5% / 5% / 5%,draw_financial
+O_TRADE,OBS,"Trade finance, guarantees and letters of credit",outflow 5%,outflow 5%,5% / 5% / 5%,5% / 5% / 5%,draw_retail
